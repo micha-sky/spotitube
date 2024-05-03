@@ -1,8 +1,12 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
+
+client_id = os.getenv('SPOTIPY_CLIENT_ID')
+
+
 # create a Spotify API client using Spotipy library
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret="",
                                                redirect_uri="http://localhost/",
                                                scope="user-library-read"
